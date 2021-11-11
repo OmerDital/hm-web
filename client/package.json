@@ -5,7 +5,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "lint": "eslint src --ext .jsx,.tsx,.js,.ts"
+    "lint": "eslint src --ext .jsx,.tsx,.js,.ts",
+    "prepare": "cd ../ && husky install ./client/.husky"
   },
   "dependencies": {
     "@emotion/cache": "^11.5.0",
@@ -33,6 +34,7 @@
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "history": "^5.1.0",
+    "husky": "^7.0.4",
     "stylis": "^4.0.10",
     "typescript": "^4.3.2",
     "vite": "^2.6.4"
