@@ -3,8 +3,12 @@ import {
 } from '@mui/material';
 import NavLink from './NavLink';
 
-const NavBar = () => (
-  <AppBar position='relative'>
+interface NavBarProps {
+  height: string
+}
+
+const NavBar = ({ height }: NavBarProps) => (
+  <AppBar position='relative' sx={{ height }}>
     <Toolbar sx={{ padding: '5px' }}>
       <Grid container>
         <Grid item width='20%'>
