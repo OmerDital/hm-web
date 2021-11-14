@@ -1,5 +1,9 @@
+import SideMenu from './SideMenu';
+
 const DistributeSong = () => (
-  <h1>הפצת שיר</h1>
+  <>
+    <SideMenu handleOpen={() => {}} />
+  </>
 );
 
 export default DistributeSong;
