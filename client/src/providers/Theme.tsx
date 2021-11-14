@@ -6,11 +6,15 @@ const theme = createTheme({
   palette: {
     primary: {
       main: '#fcfcfc',
+      dark: '#E2E2E2FF',
       contrastText: '#000000FF',
     },
     background: {
       default: '#f1f1f1',
     },
+    success: {
+      main: '#018786'
+    }
   },
 });
 
