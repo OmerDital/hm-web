@@ -12,7 +12,13 @@ interface SideMenuProps {
 }
 
 const SideMenu = ({ handleOpen }: SideMenuProps) => (
-  <SideMenuContainer container direction='column' alignItems='center' width='15%'>
+  <SideMenuContainer
+    container
+    direction='column'
+    alignItems='start'
+    width='10%'
+    sx={{ minWidth: '150px' }}
+  >
     <List sx={{ position: 'relative' }}>
       <ListItem>
         <Typography variant='h6'>אלבום</Typography>
