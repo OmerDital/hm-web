@@ -4,8 +4,8 @@ import NavBar from './NavBar';
 
 const Shell = () => (
   <Grid container height='100%'>
-    <NavBar height='10%' />
-    <Grid item container sx={{ height: '90%' }}>
+    <NavBar height='65px' />
+    <Grid item container sx={{ height: 'calc(100% - 65px)' }}>
       <Outlet />
     </Grid>
   </Grid>
