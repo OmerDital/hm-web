@@ -1,18 +1,20 @@
-import { useState } from 'react';
 import SideMenu from './SideMenu';
 import AddAlbum from './AddAlbum';
+import useOpen from '../../hooks/use-open';
+import Layers from './Layers';
 
 const DistributeSong = () => {
-  const [isLoadAlbumOpen, setIsLoadAlbumOpen] = useState(false);
-
-  const handleOpen = () => setIsLoadAlbumOpen(true);
-  const handleClose = () => setIsLoadAlbumOpen(false);
+  const [isLoadAlbumOpen, handleAlbumClose, handleAlbumOpen] = useOpen();
+  const [isLayersOpen, handleLayersClose, handleLayersOpen] = useOpen();
 
   return (
     <>
-      <SideMenu handleOpen={handleOpen} />
+      <SideMenu handleAlbumOpen={handleAlbumOpen} handleLayersOpen={handleLayersOpen} />
       {isLoadAlbumOpen && (
-        <AddAlbum handleClose={handleClose} />
+        <AddAlbum handleClose={handleAlbumClose} />
+      )}
+      {isLayersOpen && (
+        <Layers open={isLayersOpen} handleClose={handleLayersClose} />
       )}
     </>
   );

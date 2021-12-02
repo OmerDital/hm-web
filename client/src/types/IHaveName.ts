@@ -1,3 +1,5 @@
-export interface IHaveName {
-  name: string
+import { BaseDto } from './BaseDto';
+
+export interface IHaveName extends BaseDto {
+  name: string;
 }
