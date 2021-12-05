@@ -4,15 +4,17 @@ import {
 import NavLink from './NavLink';
 
 interface NavBarProps {
-  height: string
+  height: string;
 }
 
 const NavBar = ({ height }: NavBarProps) => (
   <AppBar position='relative' sx={{ height }}>
-    <Toolbar sx={{ padding: '5px' }}>
-      <Grid container flexWrap='nowrap'>
+    <Toolbar>
+      <Grid container flexWrap='nowrap' alignItems='center'>
         <Grid item>
-          <Typography variant='h5'>חזיון שירים | מצעד 41</Typography>
+          <Typography variant='h5' marginRight='10px'>
+            חזיון שירים | מצעד 41
+          </Typography>
         </Grid>
         <Grid
           container
