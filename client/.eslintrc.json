@@ -1,39 +1,31 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "airbnb-typescript"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "plugin:react/recommended",
-        "airbnb",
-        "airbnb-typescript"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "sourceType": "module",
-        "tsconfigRootDir": "./",
-        "project": "./tsconfig.json"
-    },
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-        "jest-dom",
-        "testing-library"
-    ],
-    "rules": {
-        "react/react-in-jsx-scope": "off",
-        "eol-last": ["error", "never"],
-        "linebreak-style": "off",
-        "arrow-parens": ["error", "as-needed"],
-        "indent": [2, 2],
-        "import/prefer-default-export": "off",
-        "react/jsx-props-no-spreading": "off",
-        "jsx-quotes": ["error", "prefer-single"],
-        "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 0 }],
-        "@typescript-eslint/comma-dangle": "off"
-    }
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "tsconfigRootDir": "./",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["react", "@typescript-eslint", "jest-dom", "testing-library"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
+    "eol-last": ["error", "never"],
+    "linebreak-style": "off",
+    "arrow-parens": ["error", "as-needed"],
+    "indent": [2, 2],
+    "import/prefer-default-export": "off",
+    "react/jsx-props-no-spreading": "off",
+    "jsx-quotes": ["error", "prefer-single"],
+    "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 0 }],
+    "@typescript-eslint/comma-dangle": "off"
+  }
 }

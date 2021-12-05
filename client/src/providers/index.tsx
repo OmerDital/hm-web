@@ -2,6 +2,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { CssBaseline } from '@mui/material';
 import ThemeProvider from './Theme';
 import Rtl from './Rtl';
+import { AlertProvider } from './Alert';
 import { AuthProvider } from './Auth';
 
 const Providers = ({ children }: { children: JSX.Element }) => (
@@ -9,9 +10,9 @@ const Providers = ({ children }: { children: JSX.Element }) => (
     <ThemeProvider>
       <CssBaseline />
       <BrowserRouter>
-        <AuthProvider>
-          {children}
-        </AuthProvider>
+        <AlertProvider>
+          <AuthProvider>{children}</AuthProvider>
+        </AlertProvider>
       </BrowserRouter>
     </ThemeProvider>
   </Rtl>

@@ -10,7 +10,7 @@ const App = () => {
 
   return (
     <Suspense fallback={<CircularProgress />}>
-      {ensureAuthorized() ? <AuthenticatedApp /> : <UnauthenticatedApp /> }
+      {ensureAuthorized() ? <AuthenticatedApp /> : <UnauthenticatedApp />}
     </Suspense>
   );
 };
