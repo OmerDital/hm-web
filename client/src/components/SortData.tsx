@@ -5,8 +5,8 @@ import {
   FormControl, InputLabel, MenuItem, Select
 } from '@mui/material';
 import { sortBy } from 'lodash';
-import { IHaveName } from '../types/IHaveName';
 import { SortOption } from '../types/SortOption';
+import { BaseDto } from '../types/BaseDto';
 
 interface SortDataProps<T> {
   dataToDisplay: T[],
@@ -15,7 +15,7 @@ interface SortDataProps<T> {
   sortOptions: SortOption[]
 }
 
-const SortData = <T extends IHaveName>({
+const SortData = <T extends BaseDto>({
   defaultSortBy, dataToDisplay, setDataToDisplay, sortOptions
 }
 : SortDataProps<T>) => {

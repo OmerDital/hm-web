@@ -28,7 +28,7 @@ const AddAlbum = ({ handleClose }: AddAlbumProps) => {
       <LayersOutlinedIcon sx={{ width: '240px', height: '220px' }} />
       {!album && <Typography variant='h6'>אין אלבום טעון כעת</Typography>}
       <Stack direction='row' spacing={2} sx={{ margin: '24px' }}>
-        <Button variant='contained' color='success' onClick={() => setOpen(true)}>טען אלבום</Button>
+        <Button variant='contained' color='secondary' onClick={() => setOpen(true)}>טען אלבום</Button>
         <Button variant='contained'>צור חדש</Button>
       </Stack>
       <LoadAlbumDialog open={open} handleClose={() => setOpen(false)} />
