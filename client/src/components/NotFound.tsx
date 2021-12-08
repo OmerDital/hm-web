@@ -19,7 +19,7 @@ const NotFound = () => {
       <Typography variant='h5'>
         {' אופס! הדף שביקשת אינו נמצא, אנא חזור לדף הבית ונסה שנית  '}
       </Typography>
-      <Button variant='contained' color='success' onClick={() => navigate('/')}>
+      <Button variant='contained' color='success' onClick={() => navigate('/manage-entities')}>
         לדף הבית
       </Button>
     </Grid>

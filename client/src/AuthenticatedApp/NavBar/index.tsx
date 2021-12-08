@@ -20,7 +20,7 @@ const NavBar = ({ height }: NavBarProps) => (
           container
           justifyContent='space-around'
           alignItems='center'
-          flexWrap='noWrap'
+          wrap='nowrap'
           sx={{ width: 'auto', height: '100%' }}
         >
           <NavLink to='/'>ניהול ישויות</NavLink>

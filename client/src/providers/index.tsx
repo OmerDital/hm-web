@@ -1,13 +1,18 @@
-import { FC } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { CssBaseline } from '@mui/material';
 import ThemeProvider from './Theme';
 import Rtl from './Rtl';
+import { AuthProvider } from './Auth';
 
-const Providers: FC = ({ children }) => (
+const Providers = ({ children }: { children: JSX.Element }) => (
   <Rtl>
     <ThemeProvider>
       <CssBaseline />
-      {children}
+      <BrowserRouter>
+        <AuthProvider>
+          {children}
+        </AuthProvider>
+      </BrowserRouter>
     </ThemeProvider>
   </Rtl>
 );
