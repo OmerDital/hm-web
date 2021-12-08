@@ -1,6 +1,6 @@
 import { getFilteredData } from '.';
 
-const data = [{ name: 'a' }, { name: 'bc' }, { name: 'c' }];
+const data = [{ id: '1', name: 'a' }, { id: '2', name: 'bc' }, { id: '3', name: 'c' }];
 
 test('filter all data except one', async () => {
   const filtered = getFilteredData('a', data);

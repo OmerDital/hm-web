@@ -26,7 +26,7 @@ const sortOptions = [
 
 const LoadAlbumDialog = ({ open, handleClose }: LoadAlbumDialogProps) => {
   const [albumsToDisplay, setAlbumsToDisplay] = useState<Album[]>([]);
-  const [albums] = useFetch<Album>('albums');
+  const [albums] = useFetch<Album[]>('albums', []);
 
   return (
     <Dialog open={open} onClose={handleClose} maxWidth='md' fullWidth>
@@ -38,7 +38,7 @@ const LoadAlbumDialog = ({ open, handleClose }: LoadAlbumDialogProps) => {
           </IconButton>
         </Grid>
         <Stack direction='row' spacing={2} sx={{ margin: 2 }}>
-          <SearchByNameFilter data={albums} setDataToDisplay={setAlbumsToDisplay} />
+          <SearchByNameFilter data={albums as Album[]} setDataToDisplay={setAlbumsToDisplay} />
           <SortData
             dataToDisplay={albumsToDisplay}
             setDataToDisplay={setAlbumsToDisplay}

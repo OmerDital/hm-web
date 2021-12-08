@@ -21,7 +21,7 @@ interface LayerTabProps {
 }
 
 const LayerTab = ({ value, index, handleClose }: LayerTabProps) => {
-  const [layers] = useFetch<Layer>('layers');
+  const [layers] = useFetch<Layer[]>('layers');
 
   return (
     <Box
@@ -44,7 +44,7 @@ const LayerTab = ({ value, index, handleClose }: LayerTabProps) => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {layers.map(layer => (
+                {layers?.map(layer => (
                   <TableRow
                     key={layer.id}
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
