@@ -6,18 +6,18 @@ import { User } from '../types/User';
 import useFetch from '../hooks/use-fetch';
 
 interface IAuthContext {
-  user: User | null
-  getToken: () => string | null
-  updateUser: (user: User) => void
-  ensureAuthorized: () => string | User | null,
-  setAuth: (token: string, newUser: User) => void
-  setLoggedOut: () => void
+  user: User | null;
+  getToken: () => string | null;
+  updateUser: (user: User) => void;
+  ensureAuthorized: () => string | User | null;
+  setAuth: (token: string, newUser: User) => void;
+  setLoggedOut: () => void;
 }
 
 const tokenKey = 'token';
 const AuthContext = createContext<IAuthContext>({} as IAuthContext);
 
-const AuthProvider = ({ children } : { children: JSX.Element }) => {
+const AuthProvider = ({ children }: { children: JSX.Element }) => {
   const [user, setUser] = useState<User | null>(null);
   const [me, isLoading, error] = useFetch<User>('me');
 
@@ -68,7 +68,7 @@ const AuthProvider = ({ children } : { children: JSX.Element }) => {
         updateUser,
         ensureAuthorized,
         setAuth,
-        setLoggedOut,
+        setLoggedOut
       }}
     >
       {children}

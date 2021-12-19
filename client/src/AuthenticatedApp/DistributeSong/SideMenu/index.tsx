@@ -1,6 +1,4 @@
-import {
-  List, ListItem, Typography
-} from '@mui/material';
+import { List, ListItem, Typography } from '@mui/material';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import AddIcon from '@mui/icons-material/Add';
 import LayersIcon from '@mui/icons-material/Layers';
@@ -8,8 +6,8 @@ import MenuButton from './MenuButton';
 import { SideMenuContainer } from './SideMenuContainer';
 
 interface SideMenuProps {
-  handleAlbumOpen: () => void
-  handleLayersOpen: () => void
+  handleAlbumOpen: () => void;
+  handleLayersOpen: () => void;
 }
 
 const SideMenu = ({ handleAlbumOpen, handleLayersOpen }: SideMenuProps) => (
