@@ -9,10 +9,11 @@ const DistributeSong = () => {
 
   return (
     <>
-      <SideMenu handleAlbumOpen={handleAlbumOpen} handleLayersOpen={handleLayersOpen} />
-      {isLoadAlbumOpen && (
-        <AddAlbum handleClose={handleAlbumClose} />
-      )}
+      <SideMenu
+        handleAlbumOpen={handleAlbumOpen}
+        handleLayersOpen={handleLayersOpen}
+      />
+      {isLoadAlbumOpen && <AddAlbum handleClose={handleAlbumClose} />}
       {isLayersOpen && (
         <Layers open={isLayersOpen} handleClose={handleLayersClose} />
       )}
