@@ -7,7 +7,7 @@
     "serve": "vite preview",
     "lint": "eslint src --ext .jsx,.tsx,.js,.ts",
     "prepare": "cd ../ && husky install ./client/.husky",
-    "test": "jest --env=jsdom"
+    "test": "jest --coverage --env=jsdom"
   },
   "dependencies": {
     "@mui/icons-material": "^5.1.0",
