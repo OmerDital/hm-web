@@ -2,31 +2,42 @@ import {
   AppBar, Grid, Toolbar, Typography
 } from '@mui/material';
 import NavLink from './NavLink';
+import Greeting from './Greeting';
 
 interface NavBarProps {
   height: string;
 }
 
 const NavBar = ({ height }: NavBarProps) => (
-  <AppBar position='relative' sx={{ height }}>
+  <AppBar position='relative' sx={{ height, minWidth: '550px' }}>
     <Toolbar>
-      <Grid container flexWrap='nowrap' alignItems='center'>
-        <Grid item>
-          <Typography variant='h5' marginRight='10px'>
-            חזיון שירים | מצעד 41
-          </Typography>
+      <Grid
+        container
+        flexWrap='nowrap'
+        alignItems='center'
+        justifyContent='space-between'
+      >
+        <Grid container flexWrap='nowrap' sx={{ width: 'auto' }}>
+          <Grid item>
+            <Typography variant='h5' marginRight='10px'>
+              חזיון שירים | מצעד 41
+            </Typography>
+          </Grid>
+          <Grid
+            container
+            justifyContent='space-around'
+            alignItems='center'
+            wrap='nowrap'
+            sx={{ width: 'auto', height: '100%' }}
+          >
+            <NavLink to='/'>ניהול ישויות</NavLink>
+            <NavLink to='/distribute-song'>הפצת שיר</NavLink>
+            <NavLink to='/calculators'>מחשבונים</NavLink>
+            <NavLink to='/users'>משתמשים</NavLink>
+          </Grid>
         </Grid>
-        <Grid
-          container
-          justifyContent='space-around'
-          alignItems='center'
-          wrap='nowrap'
-          sx={{ width: 'auto', height: '100%' }}
-        >
-          <NavLink to='/'>ניהול ישויות</NavLink>
-          <NavLink to='/distribute-song'>הפצת שיר</NavLink>
-          <NavLink to='/calculators'>מחשבונים</NavLink>
-          <NavLink to='/users'>משתמשים</NavLink>
+        <Grid container sx={{ width: 'auto' }}>
+          <Greeting />
         </Grid>
       </Grid>
     </Toolbar>
