@@ -8,7 +8,7 @@ import { SideMenuContainer } from '../SideMenu/SideMenuContainer';
 import LoadAlbumDialog from './LoadAlbumDialog';
 
 interface AddAlbumProps {
-  handleClose: () => void
+  handleClose: () => void;
 }
 
 const AddAlbum = ({ handleClose }: AddAlbumProps) => {
@@ -21,6 +21,7 @@ const AddAlbum = ({ handleClose }: AddAlbumProps) => {
       direction='column'
       alignItems='center'
       width='30%'
+      flexWrap='nowrap'
     >
       <IconButton onClick={handleClose} sx={{ alignSelf: 'flex-end' }}>
         <CloseIcon />
@@ -28,7 +29,13 @@ const AddAlbum = ({ handleClose }: AddAlbumProps) => {
       <LayersOutlinedIcon sx={{ width: '240px', height: '220px' }} />
       {!album && <Typography variant='h6'>אין אלבום טעון כעת</Typography>}
       <Stack direction='row' spacing={2} sx={{ margin: '24px' }}>
-        <Button variant='contained' color='secondary' onClick={() => setOpen(true)}>טען אלבום</Button>
+        <Button
+          variant='contained'
+          color='secondary'
+          onClick={() => setOpen(true)}
+        >
+          טען אלבום
+        </Button>
         <Button variant='contained'>צור חדש</Button>
       </Stack>
       <LoadAlbumDialog open={open} handleClose={() => setOpen(false)} />
