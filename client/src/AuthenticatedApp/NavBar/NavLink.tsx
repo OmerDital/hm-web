@@ -1,6 +1,6 @@
 import { Button, useTheme } from '@mui/material';
 import {
-  Link, LinkProps, useMatch, useResolvedPath,
+  Link, LinkProps, useMatch, useResolvedPath
 } from 'react-router-dom';
 import { forwardRef } from 'react';
 
@@ -13,8 +13,7 @@ const CustomLink = forwardRef<HTMLAnchorElement, LinkProps>(
     return (
       <Link
         style={{
-          backgroundColor: match
-            ? theme.palette.background.default : theme.palette.primary.main,
+          backgroundColor: match ? theme.palette.primary.dark : 'transparent'
         }}
         to={to}
         ref={ref}

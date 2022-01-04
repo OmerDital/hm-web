@@ -3,13 +3,14 @@ import {
 } from '@mui/material';
 import NavLink from './NavLink';
 import Greeting from './Greeting';
+import ColorModeButton from './ColorModeButton';
 
 interface NavBarProps {
   height: string;
 }
 
 const NavBar = ({ height }: NavBarProps) => (
-  <AppBar position='relative' sx={{ height, minWidth: '550px' }}>
+  <AppBar position='relative' sx={{ height, minWidth: '620px' }}>
     <Toolbar>
       <Grid
         container
@@ -36,8 +37,14 @@ const NavBar = ({ height }: NavBarProps) => (
             <NavLink to='/users'>משתמשים</NavLink>
           </Grid>
         </Grid>
-        <Grid container sx={{ width: 'auto' }}>
+        <Grid
+          container
+          sx={{ width: 'auto' }}
+          alignItems='baseline'
+          flexWrap='nowrap'
+        >
           <Greeting />
+          <ColorModeButton />
         </Grid>
       </Grid>
     </Toolbar>
