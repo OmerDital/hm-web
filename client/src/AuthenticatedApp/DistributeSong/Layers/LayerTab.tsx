@@ -37,7 +37,7 @@ const LayerTab = ({ value, index, handleClose }: LayerTabProps) => {
               <TableHead>
                 <TableRow sx={{ backgroundColor: 'background.default' }}>
                   <TableCell>
-                    <Checkbox color='secondary' />
+                    <Checkbox color='success' />
                   </TableCell>
                   <TableCell>שם השכבה</TableCell>
                   <TableCell>בלה בלה</TableCell>
