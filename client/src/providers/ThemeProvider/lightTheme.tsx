@@ -15,7 +15,8 @@ const lightTheme = createTheme({
     background: {
       default: '#f1f1f1'
     }
-  }
+  },
+  typography: { fontFamily: 'Segoe UI' }
 });
 
 export default lightTheme;
