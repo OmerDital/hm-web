@@ -17,7 +17,8 @@ const darkTheme = createTheme({
     }
   },
   typography: {
-    button: { color: 'white' }
+    button: { color: 'white' },
+    fontFamily: ['Segoe UI'].join(',')
   }
 });
 
