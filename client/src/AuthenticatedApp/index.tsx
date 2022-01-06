@@ -5,6 +5,7 @@ import Calculators from './Calculators';
 import Shell from './Shell';
 import Users from './Users';
 import NotFound from '../components/NotFound';
+import LoveCalculator from './Calculators/LoveCalculator';
 
 const ShellRoutes = () => (
   <Routes>
@@ -13,6 +14,7 @@ const ShellRoutes = () => (
       <Route path='manage-entities' element={<ManageEntities />} />
       <Route path='distribute-song' element={<DistributeSong />} />
       <Route path='calculators' element={<Calculators />} />
+      <Route path='calculators/love-calculator' element={<LoveCalculator />} />
       <Route path='users' element={<Users />} />
       <Route path='*' element={<NotFound />} />
     </Route>
