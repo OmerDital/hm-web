@@ -1,19 +1,20 @@
-import { Grid, Typography, Button } from '@mui/material';
-import CalculatorsTabsPanel from './CalculatorsTabsPanel';
+import { Grid } from '@mui/material';
+import CardLink from '../CardLink';
 
 const Calculators = () => (
-  <Grid
-    container
-    direction='column'
-    flexWrap='nowrap'
-    sx={{ padding: '50px 100px' }}
-  >
-    <Typography fontSize='32px'>מחשבונים</Typography>
-    <Typography>בחר מחשבונים לעבוד איתם</Typography>
-    <CalculatorsTabsPanel />
-    <Button color='success' variant='contained' sx={{ alignSelf: 'flex-end' }}>
-      תחילת עבודה
-    </Button>
+  <Grid container>
+    <Grid item xs={12} sm={6}>
+      <CardLink to='/calculators/love-calculator'>מחשבון אהבה</CardLink>
+    </Grid>
+    <Grid item xs={12} sm={6}>
+      <CardLink to='/calculators/love-calculator'>מחשבון אהבה</CardLink>
+    </Grid>
+    <Grid item xs={12} sm={6}>
+      <CardLink to='/calculators/love-calculator'>מחשבון אהבה</CardLink>
+    </Grid>
+    <Grid item xs={12} sm={6}>
+      <CardLink to='/calculators/love-calculator'>מחשבון אהבה</CardLink>
+    </Grid>
   </Grid>
 );
 
