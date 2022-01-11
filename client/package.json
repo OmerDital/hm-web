@@ -10,16 +10,17 @@
     "test": "jest --coverage --env=jsdom"
   },
   "dependencies": {
+    "@emotion/cache": "^11.5.0",
+    "@emotion/react": "^11.5.0",
     "@mui/icons-material": "^5.1.0",
     "@mui/material": "^5.0.6",
     "@mui/system": "^5.0.6",
     "axios": "^0.24.0",
     "babel-jest": "^27.3.1",
-    "@emotion/cache": "^11.5.0",
-    "@emotion/react": "^11.5.0",
     "lodash": "^4.17.21",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "react-hook-form": "^7.22.5",
     "react-router-dom": "^6.0.0-beta.8",
     "stylis-plugin-rtl": "^2.1.1"
   },
